@@ -12,7 +12,7 @@
  } from "@/components/ui/select";
  import { Card, CardContent } from "@/components/ui/card";
  import { ProgressBar } from "../ProgressBar";
- import { ArrowLeft, ArrowRight, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
  import { cn } from "@/lib/utils";
  import {
    FormData,
@@ -21,6 +21,7 @@
    CurrentRole,
    TargetRole,
  } from "@/lib/skillData";
+import scalerLogo from "@/assets/scaler-logo.svg";
  
  interface WizardScreenProps {
    formData: FormData;
@@ -76,10 +77,7 @@
        {/* Header */}
        <header className="px-6 py-4">
          <div className="max-w-6xl mx-auto flex items-center gap-2">
-           <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-             <Zap className="w-5 h-5 text-primary-foreground" />
-           </div>
-           <span className="text-xl font-bold text-gradient">Scaler Demo</span>
+          <img src={scalerLogo} alt="Scaler" className="h-8" />
          </div>
        </header>
  

@@ -3,8 +3,9 @@
  import { Input } from "@/components/ui/input";
  import { Card, CardContent } from "@/components/ui/card";
  import { SkillCard } from "../SkillCard";
- import { ArrowRight, Mail, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, Mail, TrendingUp } from "lucide-react";
  import { FormData, getSkillsForRole, calculateTotalImpact, CurrentRole, currentRoles } from "@/lib/skillData";
+import scalerLogo from "@/assets/scaler-logo.svg";
  
  interface PreviewScreenProps {
    formData: FormData;
@@ -45,10 +46,7 @@
        {/* Header */}
        <header className="px-6 py-4">
          <div className="max-w-6xl mx-auto flex items-center gap-2">
-           <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-             <Zap className="w-5 h-5 text-primary-foreground" />
-           </div>
-           <span className="text-xl font-bold text-gradient">Scaler Demo</span>
+          <img src={scalerLogo} alt="Scaler" className="h-8" />
          </div>
        </header>
  
