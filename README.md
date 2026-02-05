@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
 
-## Project info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+# Skill Gap → Salary Impact Calculator
+## Premium SaaS Demo Web App
 
-## How can I edit this code?
+A fully interactive, frontend-only demo showcasing a career growth calculator with modern, polished UI similar to Scaler/Stripe/Notion.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎯 What We'll Build
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Screen 1: Landing Page
+- "Scaler Demo" logo with gradient branding
+- Bold headline: "Calculate Your Salary Growth Potential"
+- Compelling subtext about ₹5–15L salary potential
+- Animated "Start Free Analysis →" CTA button
+- Trust badges and social proof elements
+- Gradient hero section with subtle animations
 
-Changes made via Lovable will be committed automatically to this repo.
+### Screen 2: Multi-Step Input Wizard
+**4-step flow with animated progress bar:**
 
-**Use your preferred IDE**
+1. **Current Role** — Dropdown (Software Engineer, Backend Developer, Frontend Developer, Data Analyst, DevOps Engineer)
+2. **Experience** — Interactive slider (0-10 years) with live label updates
+3. **Current Salary** — ₹ input field with validation styling
+4. **Target Role** — Dropdown (Senior Engineer, Cloud Engineer, Data Scientist, Tech Lead, Solutions Architect)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Each step animates smoothly with slide/fade transitions.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Screen 3: Loading Simulation
+- Elegant spinner animation
+- Dynamic checklist with staggered animations:
+  - ✔ Comparing salary benchmarks
+  - ✔ Identifying skill gaps
+  - → Calculating ROI
+- Auto-advances after ~2.5 seconds
 
-Follow these steps:
+### Screen 4: Results Preview + Email Gate
+- Personalized results based on role mapping
+- "You're 3 skills away from your target role" message
+- Locked skill cards with glassmorphism effect:
+  - 🔒 Skill 1 — ₹4–6L impact
+  - 🔒 Skill 2 — ₹3–5L impact
+  - 🔒 Skill 3 — ₹2–4L impact
+- Total potential: ₹9–15L highlight
+- Email input with validation
+- Simulated submission → success transition
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Screen 5: Full Report View
+- Unlocked roadmap card with priority skill details:
+  - Skill name (e.g., Cloud Computing AWS)
+  - Current level → Target level
+  - Learning time estimate
+  - Salary impact range
+- Action buttons: "Book Free Career Call" & "View Courses"
+- Demo mode modal on button clicks
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ✨ UI/UX Features
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+**Visual Design:**
+- Gradient hero sections with soft color transitions
+- Glassmorphism cards with backdrop blur
+- Soft shadows and rounded corners
+- Modern typography (Inter/system fonts)
+- Smooth hover effects with scale/glow
 
-**Edit a file directly in GitHub**
+**Interactions:**
+- Progress indicator bar showing current step
+- Micro-animations on all interactive elements
+- Button loading states
+- Form validation with visual feedback
+- Slide/fade transitions between screens
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+**Responsive:**
+- Mobile-first responsive layout
+- Touch-friendly inputs
+- Adaptive spacing and typography
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🧠 Simulated Logic
 
-## What technologies are used for this project?
+**Role-to-Skills Mapping:**
+- Software Engineer → Cloud, System Design, DSA
+- Backend Developer → Microservices, Databases, API Design
+- Frontend Developer → React Advanced, TypeScript, Performance
+- Data Analyst → SQL, Python, Data Visualization
+- DevOps Engineer → Kubernetes, CI/CD, Infrastructure as Code
 
-This project is built with:
+Results will feel intelligent with deterministic fake data based on user selections.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📁 Architecture
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- **Pages**: Landing, Wizard, Loading, Preview, Report
+- **Components**: ProgressBar, StepIndicator, RoleSelector, ExperienceSlider, SalaryInput, SkillCard, EmailGate, DemoModal
+- **State**: React useState/useReducer for form data and navigation
+- **Animations**: Tailwind + CSS transitions
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
