@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 262 83% 58%;
+    --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 220 14% 96%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 220 14% 96%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 262 83% 58%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,14 +34,14 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 262 83% 58%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
 
     /* Custom gradient colors */
-    --gradient-start: 262 83% 58%;
-    --gradient-end: 316 70% 52%;
-    --gradient-accent: 199 89% 48%;
+    --gradient-start: 217 91% 60%;
+    --gradient-end: 199 89% 48%;
+    --gradient-accent: 180 70% 45%;
     
     /* Glass effect */
     --glass-bg: 0 0% 100% / 0.7;
@@ -86,9 +86,9 @@ All colors MUST be HSL.
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
     
-    --gradient-start: 262 83% 58%;
-    --gradient-end: 316 70% 52%;
-    --gradient-accent: 199 89% 48%;
+    --gradient-start: 217 91% 60%;
+    --gradient-end: 199 89% 48%;
+    --gradient-accent: 180 70% 45%;
     
     --glass-bg: 222 47% 11% / 0.7;
     --glass-border: 0 0% 100% / 0.1;
@@ -120,7 +120,7 @@ All colors MUST be HSL.
   }
   
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(262 83% 58% / 0.1) 0%, hsl(316 70% 52% / 0.1) 50%, hsl(199 89% 48% / 0.05) 100%);
+    background: linear-gradient(135deg, hsl(217 91% 60% / 0.1) 0%, hsl(199 89% 48% / 0.1) 50%, hsl(180 70% 45% / 0.05) 100%);
   }
   
   .glass {
@@ -137,7 +137,7 @@ All colors MUST be HSL.
   }
   
   .shadow-glow {
-    box-shadow: 0 0 40px hsl(262 83% 58% / 0.3);
+    box-shadow: 0 0 40px hsl(217 91% 60% / 0.3);
   }
   
   .animate-float {
@@ -161,8 +161,8 @@ All colors MUST be HSL.
   }
   
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(262 83% 58% / 0.4); }
-    50% { box-shadow: 0 0 40px hsl(262 83% 58% / 0.6); }
+    0%, 100% { box-shadow: 0 0 20px hsl(217 91% 60% / 0.4); }
+    50% { box-shadow: 0 0 40px hsl(217 91% 60% / 0.6); }
   }
   
   .pulse-glow {

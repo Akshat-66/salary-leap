@@ -1,6 +1,7 @@
  import { useEffect, useState } from "react";
- import { Check, Loader2, Zap } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
  import { cn } from "@/lib/utils";
+import scalerLogo from "@/assets/scaler-logo.svg";
  
  interface LoadingScreenProps {
    onComplete: () => void;
@@ -42,10 +43,7 @@
        {/* Header */}
        <header className="absolute top-0 left-0 right-0 px-6 py-4">
          <div className="max-w-6xl mx-auto flex items-center gap-2">
-           <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-             <Zap className="w-5 h-5 text-primary-foreground" />
-           </div>
-           <span className="text-xl font-bold text-gradient">Scaler Demo</span>
+          <img src={scalerLogo} alt="Scaler" className="h-8" />
          </div>
        </header>
  

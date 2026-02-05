@@ -3,8 +3,9 @@
  import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
  import { SkillCard } from "../SkillCard";
  import { DemoModal } from "../DemoModal";
- import { Calendar, GraduationCap, Zap, RotateCcw } from "lucide-react";
+import { Calendar, GraduationCap, RotateCcw, ExternalLink, BookOpen } from "lucide-react";
  import { FormData, getSkillsForRole, calculateTotalImpact, CurrentRole, currentRoles, targetRoles } from "@/lib/skillData";
+import scalerLogo from "@/assets/scaler-logo.svg";
  
  interface ReportScreenProps {
    formData: FormData;
@@ -33,10 +34,7 @@
        <header className="px-6 py-4">
          <div className="max-w-6xl mx-auto flex items-center justify-between">
            <div className="flex items-center gap-2">
-             <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-               <Zap className="w-5 h-5 text-primary-foreground" />
-             </div>
-             <span className="text-xl font-bold text-gradient">Scaler Demo</span>
+            <img src={scalerLogo} alt="Scaler" className="h-8" />
            </div>
            <Button variant="ghost" onClick={onRestart} className="gap-2">
              <RotateCcw className="w-4 h-4" />
@@ -106,6 +104,35 @@
            ))}
          </div>
  
+        {/* Recommended Courses Section */}
+        <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+          <BookOpen className="w-5 h-5 text-primary" />
+          Recommended Scaler Courses
+        </h3>
+        <div className="space-y-3 mb-8">
+          {skills.map((skill) => (
+            <Card key={`course-${skill.name}`} className="glass border-border/50 hover:border-primary/30 transition-all">
+              <CardContent className="p-4 flex items-center justify-between">
+                <div>
+                  <h4 className="font-semibold">{skill.courseName || `Scaler - ${skill.name}`}</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Learn {skill.name} • {skill.learningTime}
+                  </p>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleAction(`View ${skill.courseName || skill.name}`)}
+                  className="gap-2 border-primary/30 hover:bg-primary/5"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  View Course
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
          {/* Total Impact Summary */}
          <Card className="glass border-primary/30 mb-8 animate-fade-in">
            <CardContent className="p-6 text-center">

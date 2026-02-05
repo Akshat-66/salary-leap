@@ -1,5 +1,6 @@
  import { Button } from "@/components/ui/button";
- import { ArrowRight, Shield, Users, Zap } from "lucide-react";
+import { ArrowRight, Shield, Users, Clock } from "lucide-react";
+import scalerLogo from "@/assets/scaler-logo.svg";
  
  interface LandingScreenProps {
    onStart: () => void;
@@ -12,10 +13,7 @@
        <header className="px-6 py-4">
          <div className="max-w-6xl mx-auto flex items-center justify-between">
            <div className="flex items-center gap-2">
-             <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-               <Zap className="w-5 h-5 text-primary-foreground" />
-             </div>
-             <span className="text-xl font-bold text-gradient">Scaler Demo</span>
+            <img src={scalerLogo} alt="Scaler" className="h-8" />
            </div>
          </div>
        </header>
@@ -67,7 +65,7 @@
                <span className="text-sm">50,000+ Professionals Analyzed</span>
              </div>
              <div className="flex items-center gap-2 text-muted-foreground">
-               <Zap className="w-5 h-5 text-primary" />
+              <Clock className="w-5 h-5 text-primary" />
                <span className="text-sm">2-Minute Assessment</span>
              </div>
            </div>
